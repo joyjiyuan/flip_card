@@ -156,10 +156,19 @@ class FlipCardState extends State<FlipCard>
   }
 
   void toggleCard() {
-    /*if (widget.onFlip != null) {
+    if (widget.onFlip != null) {
       widget.onFlip!();
-    }*/
+    }
 
+    controller!.duration = Duration(milliseconds: widget.speed);
+    if (isFront) {
+      controller!.forward();
+    } else {
+      controller!.reverse();
+    }
+  }
+
+  void toggleCardWithoutCallOnFlip() {
     controller!.duration = Duration(milliseconds: widget.speed);
     if (isFront) {
       controller!.forward();
