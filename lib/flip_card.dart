@@ -1,6 +1,7 @@
 library flip_card;
 
 import 'dart:math';
+
 import 'package:flip_card/flip_card_controller.dart';
 import 'package:flutter/material.dart';
 
@@ -155,9 +156,9 @@ class FlipCardState extends State<FlipCard>
   }
 
   void toggleCard() {
-    if (widget.onFlip != null) {
+    /*if (widget.onFlip != null) {
       widget.onFlip!();
-    }
+    }*/
 
     controller!.duration = Duration(milliseconds: widget.speed);
     if (isFront) {
