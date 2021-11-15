@@ -1,7 +1,7 @@
 import 'dart:async';
 
-import 'package:flutter/material.dart';
 import 'package:flip_card/flip_card.dart';
+import 'package:flutter/material.dart';
 
 class FlipCardController {
   /// The internal widget state.
@@ -14,6 +14,8 @@ class FlipCardController {
 
   /// Flip the card
   void toggleCard() => state?.toggleCard();
+
+  void toggleCardWithoutCallOnFlip() => state?.toggleCardWithoutCallOnFlip();
 
   /// Skew by amount percentage (0 - 1.0)
   /// This can be used with a MouseReagion to indicate that the card can
